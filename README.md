@@ -12,3 +12,5 @@ configuration and no plugins.
 My OS of choice is Ubuntu 18.04 and I don't see that changing in forseable future,
 so I made `setup.sh` to quickly get me up and running on a clean install.
 
+This configuration is simple and I've mostly settled on it some time ago as I've shifted my focus towards things that scale.
+
