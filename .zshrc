@@ -37,6 +37,11 @@ alias vim="nvim"
 alias vi="nvim"
 alias chrome="google-chrome"
 
+# functions
+eexport() {
+    export $(grep -v ^# $1 | xargs)
+}
+
 # nvm 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -48,3 +53,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
