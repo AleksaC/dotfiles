@@ -4,6 +4,9 @@ export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# Set nvim as my default visual editor
+export VISUAL="$(which nvim)"
+
 plugins=(
     git
     django
