@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # dependenies
 sudo apt update -y
 sudo apt install git curl -y
