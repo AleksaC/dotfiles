@@ -1,5 +1,6 @@
 "Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
