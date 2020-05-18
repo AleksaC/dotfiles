@@ -33,7 +33,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
 
 # aliases
 alias cat="bat --style=plain --paging=never"
-alias vnv="python -m venv venv"
 alias vact="source venv/bin/activate"
 alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf"
 alias vim="nvim"
@@ -43,6 +42,14 @@ alias chrome="google-chrome"
 # functions
 eexport() {
     export $(grep -v ^# $1 | xargs)
+}
+
+vnv() {
+    if command -v virtualenv >/dev/null 2>&1; then
+        virtualenv venv -p python
+    else
+        python -m venv venv
+    fi
 }
 
 # nvm 
@@ -56,4 +63,3 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
