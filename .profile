@@ -12,3 +12,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
+export PATH="$HOME/.nvm/versions/node/v12.16.0/bin:$PATH"
