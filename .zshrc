@@ -22,14 +22,9 @@ plugins=(
     golang
 )
 
-source $ZSH/oh-my-zsh.sh
-source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# powerlevel9k configuration
-POWERLEVEL9K_MODE="awesome-patched"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
+source $ZSH/oh-my-zsh.sh
 
 # aliases
 alias cat="bat --style=plain --paging=never"
