@@ -59,10 +59,33 @@ pc() {
    charm $1 > /dev/null 2>&1 &!
 }
 
-# nvm 
+# nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+lazynvm() {
+    unset -f nvm node npm npx
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+}
+
+nvm() {
+    lazynvm
+    nvm $@
+}
+
+node() {
+    lazynvm
+    node $@
+}
+
+npm() {
+    lazynvm
+    npm $@
+}
+
+npx() {
+    lazynvm
+    npx $@
+}
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
