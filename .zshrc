@@ -56,7 +56,7 @@ ws() {
 }
 
 pc() {
-   charm $1 > /dev/null 2>&1 &!
+    pycharm $1 > /dev/null 2>&1 &!
 }
 
 # nvm
