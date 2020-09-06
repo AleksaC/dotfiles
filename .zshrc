@@ -62,7 +62,7 @@ pc() {
 # nvm
 export NVM_DIR="$HOME/.nvm"
 lazynvm() {
-    unset -f nvm node npm npx
+    unset -f nvm node npm npx yarn
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 }
@@ -85,6 +85,11 @@ npm() {
 npx() {
     lazynvm
     npx $@
+}
+
+yarn() {
+    lazynvm
+    yarn $@
 }
 
 # pyenv
