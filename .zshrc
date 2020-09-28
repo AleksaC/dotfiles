@@ -59,6 +59,14 @@ pc() {
     pycharm $1 &> /dev/null &!
 }
 
+cl() {
+    clion $1 &> /dev/null &!
+}
+
+gld() {
+    goland $1 &> /dev/null &!
+}
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 lazynvm() {
