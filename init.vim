@@ -4,10 +4,13 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 "Editor configuration
 set autoread
+
+set updatetime=100
 
 set ruler
 set number
