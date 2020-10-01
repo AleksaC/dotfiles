@@ -14,6 +14,7 @@ set updatetime=100
 
 set ruler
 set number
+set signcolumn=yes
 set colorcolumn=81
 
 set tabstop=4
