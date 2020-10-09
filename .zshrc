@@ -102,7 +102,7 @@ yarn() {
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv &> /dev/null; then
   eval "$(pyenv init -)"
 fi
@@ -115,3 +115,6 @@ export PYTHONSTARTUP=~/.pythonrc.py
 
 # ttouch completions
 [[ ! -f ~/.ttouch/shell_completions.sh ]] || source ~/.ttouch/shell_completions.sh
+
+# Created by `userpath` on 2020-09-27 17:36:04
+[[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:/home/aleksa/.local/bin"
