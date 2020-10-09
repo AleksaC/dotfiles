@@ -9,11 +9,12 @@ call plug#end()
 
 "Editor configuration
 set autoread
-
 set updatetime=100
 
 set ruler
 set number
+set relativenumber
+set nowrap
 set signcolumn=yes
 set colorcolumn=81
 
@@ -26,8 +27,9 @@ set guicursor+=i:block-Cursor
 set cursorline
 
 set spell
-set nowrap
 
 colorscheme gruvbox
 set background=dark
 let g:lightline = {'colorscheme': 'jellybeans',}
+
+let g:mapleader = ' '
