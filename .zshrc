@@ -31,6 +31,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 
 # aliases
+alias xcl="xclip -sel clip"
 alias cat="bat --style=plain --paging=never"
 alias vact="source venv/bin/activate"
 alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf"
