@@ -30,6 +30,27 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source $ZSH/oh-my-zsh.sh
 
+command_not_found_handler() {
+    if [ -x "venv/bin/$1" ]; then
+        echo "You need to activate ./venv to run $1" 1>&2
+        exe="venv/bin/$1"
+        shift
+        "$exe" "$@"
+        return $?
+    # Kinda sucks to use explicit path here, no other way around it tho, except
+    # loading nvm which is too slow in case the command is actually incorrect
+    elif [ -x "$NVM_DIR/versions/node/v12.18.2/bin/$1" ]; then
+        echo "You need to load nvm to run $1" 1>&2
+        exe="$NVM_DIR/versions/node/v12.18.2/bin/$1"
+        shift
+        "$exe" "$@"
+        return $?
+    else
+        echo "$0: $1: command not found" 1>&2
+        return 127
+    fi
+}
+
 # aliases
 alias fe="nemo . &> /dev/null &!"
 alias xcl="xclip -sel clip"
