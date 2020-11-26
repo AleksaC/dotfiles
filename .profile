@@ -7,6 +7,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
