@@ -51,10 +51,37 @@ command_not_found_handler() {
     fi
 }
 
+read -r -d '' inspect_hack <<- EOF
+import code
+import os
+import sys
+
+exec(open(os.environ.get("PYTHONSTARTUP")).read())
+
+sys.stdin = open("/dev/tty")
+print(); code.interact(local=locals())
+EOF
+
+python_shim() {
+    if [[ $PYTHONSTARTUP ]]; then
+        for arg in "$@"
+        do
+            case $arg in
+                -i)
+                    echo "$inspect_hack" | \python $@
+                    return $?
+                    ;;
+            esac
+        done
+    fi
+    \python $@
+}
+
 # aliases
 alias fe="nemo . &> /dev/null &!"
 alias xcl="xclip -sel clip"
 alias cat="bat --style=plain --paging=never"
+alias python="python_shim"
 alias vact="source venv/bin/activate"
 alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf"
 alias vim="nvim"
