@@ -169,3 +169,5 @@ export PYTHONSTARTUP=~/.pythonrc.py
 
 # Created by `userpath` on 2020-09-27 17:36:04
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:/home/aleksa/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
