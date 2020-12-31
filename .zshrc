@@ -88,6 +88,7 @@ alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf"
 alias vim="nvim"
 alias vi="nvim"
 alias chrome="google-chrome"
+alias gdc="git diff --cached"
 
 # functions
 eexport() {
@@ -170,4 +171,5 @@ export PYTHONSTARTUP=~/.pythonrc.py
 # Created by `userpath` on 2020-09-27 17:36:04
 [[ -d "$HOME/.local/bin" ]] && export PATH="$PATH:/home/aleksa/.local/bin"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
