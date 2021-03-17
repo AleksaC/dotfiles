@@ -89,6 +89,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias chrome="google-chrome"
 alias gdc="git diff --cached"
+alias EXIT="exit"
 
 # functions
 eexport() {
