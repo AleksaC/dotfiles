@@ -78,6 +78,7 @@ python_shim() {
 }
 
 # aliases
+alias ls="exa"
 alias fe="nemo . &> /dev/null &!"
 alias xcl="xclip -sel clip"
 alias cat="bat --style=plain --paging=never"
