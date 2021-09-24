@@ -13,7 +13,6 @@ export VISUAL="$(which nvim)"
 
 plugins=(
     git
-    django
     pip
     cargo
     npm
