@@ -77,6 +77,7 @@ python_shim() {
 }
 
 # aliases
+alias tf="terraform"
 alias ls="exa"
 alias top="htop || top"
 alias fe="nemo . &> /dev/null &!"
