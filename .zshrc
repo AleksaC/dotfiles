@@ -91,6 +91,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias chrome="google-chrome"
 alias gdc="git diff --cached"
+alias docker-compose="docker compose"
 alias EXIT="exit"
 
 # functions
