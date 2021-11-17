@@ -23,6 +23,7 @@ plugins=(
     zsh-syntax-highlighting
     ssh-agent
     golang
+    terraform
 )
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
