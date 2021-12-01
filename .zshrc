@@ -24,6 +24,7 @@ plugins=(
     ssh-agent
     golang
     terraform
+    kubectl
 )
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
