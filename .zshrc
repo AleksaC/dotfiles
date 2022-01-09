@@ -14,7 +14,6 @@ export VISUAL="$(which nvim)"
 plugins=(
     git
     pip
-    cargo
     npm
     yarn
     docker
@@ -25,6 +24,7 @@ plugins=(
     golang
     terraform
     kubectl
+    rust
 )
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
