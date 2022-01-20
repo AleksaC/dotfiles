@@ -17,7 +17,6 @@ plugins=(
     npm
     yarn
     docker
-    docker-compose
     zsh-autosuggestions
     zsh-syntax-highlighting
     ssh-agent
