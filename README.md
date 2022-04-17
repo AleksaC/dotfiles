@@ -5,10 +5,9 @@ My dotfile collection.
 My OS of choice is Ubuntu 20.04. I manage my OS configuration using an 
 [ansible playbook](https://github.com/AleksaC/personal-ansible).
 
-I use ~~[alacritty](https://github.com/alacritty/alacritty)~~ konsole terminal
-emulator with [zsh](https://en.wikipedia.org/wiki/Z_shell) as a default shell.
-To get extra productivity I added in a few
-[ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) plugins.
+I use [kitty](https://github.com/kovidgoyal/kitty) terminal emulator with
+[zsh](https://en.wikipedia.org/wiki/Z_shell) as a default shell. To get extra
+productivity I added in a few [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) plugins.
 
 For quick edits, I turn to [Neovim](https://neovim.io/) with minimalistic configuration.
 
