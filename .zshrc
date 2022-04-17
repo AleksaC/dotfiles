@@ -30,32 +30,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source $ZSH/oh-my-zsh.sh
 
-read -r -d '' inspect_hack <<- EOF
-import code
-import os
-import sys
-
-exec(open(os.environ.get("PYTHONSTARTUP")).read())
-
-sys.stdin = open("/dev/tty")
-print(); code.interact(local=locals())
-EOF
-
-python_shim() {
-    if [[ $PYTHONSTARTUP ]]; then
-        for arg in "$@"
-        do
-            case $arg in
-                -i)
-                    echo "$inspect_hack" | \python $@
-                    return $?
-                    ;;
-            esac
-        done
-    fi
-    \python $@
-}
-
 # aliases
 alias tf="terraform"
 alias ls="exa"
@@ -63,7 +37,6 @@ alias top="htop || top"
 alias fe="nemo . &> /dev/null &!"
 alias xcl="xclip -sel clip"
 alias cat="bat --style=plain --paging=never"
-alias python="python_shim"
 alias vact="source venv/bin/activate"
 alias wp="python -c 'import sys; print(sys.executable)'"
 alias ppt2pdf="libreoffice --headless --invisible --convert-to pdf"
