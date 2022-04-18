@@ -34,7 +34,6 @@ source $ZSH/oh-my-zsh.sh
 alias tf="terraform"
 alias ls="exa"
 alias top="htop || top"
-alias fe="nemo . &> /dev/null &!"
 alias xcl="xclip -sel clip"
 alias cat="bat --style=plain --paging=never"
 alias vact="source venv/bin/activate"
